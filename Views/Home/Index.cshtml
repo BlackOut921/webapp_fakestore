@@ -2,11 +2,26 @@
 	ViewData["Title"] = "Index";
 }
 
-<h1 class="display-1">Index</h1>
-<p class="lead">Paragraph</p>
+@section PageBanner {
+	@await Html.PartialAsync("_PartialBanner")
+}
 
-<div class="d-flex flex-row justify-content-around">
-	<div class="p-5 fs-bg-img-placeholder">Thumb_1</div>
-	<div class="p-5 fs-bg-img-placeholder">Thumb_2</div>
-	<div class="p-5 fs-bg-img-placeholder">Thumb_3</div>
+<div class="mb-3 text-center">
+	<h1 class="display-1">Index</h1>
+	<p class="lead">Paragraph</p>
+</div>
+
+<div class="d-flex flex-column flex-md-row justify-content-around mb-3">
+	<div class="fs-bg-img-placeholder p-5">Thumb_1</div>
+	<div class="fs-bg-img-placeholder p-5">Thumb_2</div>
+	<div class="fs-bg-img-placeholder p-5">Thumb_3</div>
+</div>
+
+<div class="mb-3">
+	<ul class="nav justify-content-around">
+		<li class="nav-item"><a href="#" class="nav-link">Sub-cat-1</a></li>
+		<li class="nav-item"><a href="#" class="nav-link">Sub-cat-2</a></li>
+		<li class="nav-item"><a href="#" class="nav-link">Sub-cat-3</a></li>
+		<li class="nav-item"><a href="#" class="nav-link">Sub-cat-4</a></li>
+	</ul>
 </div>

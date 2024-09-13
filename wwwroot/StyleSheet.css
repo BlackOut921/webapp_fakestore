@@ -3,13 +3,21 @@
 *, 
 *:before,
 *:after {
-    transition: 0.5s;
+    transition: 0.1s;
 }
 
 .fs-logo {
     width: max(10%, 200px, 15%);
     height: auto;
     margin: 0 auto;
+}
+
+.fs-banner-img {
+    background-image: url("Images/AdobeStock_437686659.jpeg");
+    background-attachment: scroll;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .fs-bg-img-placeholder {

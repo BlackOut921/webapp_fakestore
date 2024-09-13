@@ -9,22 +9,24 @@
 	<li class="nav-item"><a href="#" class="nav-link link-dark">Logout</a></li>
 </ul>
 
-<div class="d-flex flex-column flex-md-row align-items-stretch border-bottom">
-	<img src="~/Images/AdobeStock_537184538_black.png" alt="Company Logo" title="Company Logo" class="fs-logo" />
-	<div class="w-100 d-flex flex-column justify-content-center align-items-center p-3">
-		<div class="w-75 mb-3">
-			<form>
-				<input type="search" placeholder="Search" class="form-control w-75 mx-auto rounded-5" />
-			</form>
+<div class="container">
+	<div class="d-flex flex-column flex-md-row align-items-stretch border-bottom">
+		<img src="~/Images/fakestore_logo_1024.png" alt="Company Logo" title="Fake Store" class="fs-logo mb-2" />
+		<div class="w-100 d-flex flex-column justify-content-center align-items-center p-3">
+			<div class="w-100 mb-3">
+				<form>
+					<input type="search" placeholder="Search" class="form-control mx-auto rounded-5" />
+				</form>
+			</div>
+			<nav class="w-100">
+				<ul class="nav justify-content-center justify-content-lg-around">
+					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link link-dark">Home</a></li>
+					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link link-dark">Electronics</a></li>
+					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link link-dark">Jewelery</a></li>
+					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link link-dark">Mens Clothing</a></li>
+					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link link-dark">Womens Clothing</a></li>
+				</ul>
+			</nav>
 		</div>
-		<nav class="w-75">
-			<ul class="nav justify-content-center">
-				<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link link-dark">Home</a></li>
-				<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link link-dark">Electronics</a></li>
-				<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link link-dark">Jewelery</a></li>
-				<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link link-dark">Mens Clothing</a></li>
-				<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link link-dark">Womens Clothing</a></li>
-			</ul>
-		</nav>
 	</div>
 </div>
