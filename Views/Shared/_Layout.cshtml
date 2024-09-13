@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/bootstrap/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="~/StyleSheet.css" type="text/css" />
+</head>
+<body class="bg-body">
+    <header class="mb-3">@await Html.PartialAsync("_PartialHeader")</header>
+    <div class="container-fluid p-5 text-center mb-3 fs-bg-img-placeholder">Banner</div>
+	<main class="container mb-3">@RenderBody()</main>
+    <footer>Footer</footer>
+    <script src="~/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous" async></script>
+    <script src="~/JavaScript.js" async></script>
+</body>
+</html>

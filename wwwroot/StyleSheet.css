@@ -1,0 +1,21 @@
+﻿@charset "utf-8";
+
+*, 
+*:before,
+*:after {
+    transition: 0.5s;
+}
+
+.fs-logo {
+    width: max(10%, 200px, 15%);
+    height: auto;
+    margin: 0 auto;
+}
+
+.fs-bg-img-placeholder {
+    background-image: url("Images/AdobeStock_537184538_black.png");
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
