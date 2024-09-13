@@ -13,9 +13,9 @@
 }
 
 .fs-banner-img {
-    background-image: url("Images/AdobeStock_437686659.jpeg");
+    background-image: url("Images/AdobeStock_437686659_short.jpg");
     background-attachment: scroll;
-    background-position: left;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }

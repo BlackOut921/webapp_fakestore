@@ -2,22 +2,25 @@
 	//
 }
 
-<ul class="nav justify-content-center justify-content-md-end">
-	<li class="nav-item"><a href="#" class="nav-link link-dark">Basket</a></li>
-	<li class="nav-item"><a href="#" class="nav-link link-dark">Sign in</a></li>
-	<li class="nav-item"><a href="#" class="nav-link link-dark">Register</a></li>
-	<li class="nav-item"><a href="#" class="nav-link link-dark">Logout</a></li>
-</ul>
-
 <div class="container">
+	<ul class="nav justify-content-center justify-content-md-end">
+		<li class="nav-item"><a href="#" class="nav-link link-dark">Basket</a></li>
+		<li class="nav-item"><a href="#" class="nav-link link-dark">Sign in</a></li>
+		<li class="nav-item"><a href="#" class="nav-link link-dark">Register</a></li>
+		<li class="nav-item"><a href="#" class="nav-link link-dark">Logout</a></li>
+	</ul>
 	<div class="d-flex flex-column flex-md-row align-items-stretch border-bottom">
-		<img src="~/Images/fakestore_logo_1024.png" alt="Company Logo" title="Fake Store" class="fs-logo mb-2" />
-		<div class="w-100 d-flex flex-column justify-content-center align-items-center p-3">
+		<!-- logo -->
+		<img src="~/Images/fs_logo_1024.png" alt="Company Logo" title="Fake Store" class="fs-logo" />
+		<!-- menu -->
+		<div class="flex-fill d-flex flex-column justify-content-center align-items-center">
+			<!-- search bar -->
 			<div class="w-100 mb-3">
 				<form>
 					<input type="search" placeholder="Search" class="form-control mx-auto rounded-5" />
 				</form>
 			</div>
+			<!-- nav bar -->
 			<nav class="w-100">
 				<ul class="nav justify-content-center justify-content-lg-around">
 					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link link-dark">Home</a></li>
