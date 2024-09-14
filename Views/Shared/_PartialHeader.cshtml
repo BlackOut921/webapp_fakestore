@@ -3,13 +3,33 @@
 }
 
 <div class="container">
-	<ul class="nav justify-content-center justify-content-md-end">
-		<li class="nav-item"><a href="#" class="nav-link link-dark">Basket</a></li>
-		<li class="nav-item"><a href="#" class="nav-link link-dark">Sign in</a></li>
-		<li class="nav-item"><a href="#" class="nav-link link-dark">Register</a></li>
-		<li class="nav-item"><a href="#" class="nav-link link-dark">Logout</a></li>
+	<ul class="nav justify-content-center justify-content-md-end text-center">
+		<li class="nav-item">
+			<a href="#" class="nav-link link-dark">
+				<i class="bi bi-bag"></i>
+				<span class="d-block">Basket</span>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link link-dark">
+				<i class="bi bi-person-plus"></i>
+				<span class="d-block">Register</span>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link link-dark">
+				<i class="bi bi-box-arrow-in-right"></i>
+				<span class="d-block">Sign in</span>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link link-dark">
+				<i class="bi bi-box-arrow-in-left"></i>
+				<span class="d-block">Logout</span>
+			</a>
+		</li>
 	</ul>
-	<div class="d-flex flex-column flex-md-row align-items-stretch border-bottom">
+	<div class="d-flex flex-column flex-md-row align-items-stretch">
 		<!-- logo -->
 		<img src="~/Images/fs_logo_1024.png" alt="Company Logo" title="Fake Store" class="fs-logo" />
 		<!-- menu -->
@@ -22,7 +42,7 @@
 			</div>
 			<!-- nav bar -->
 			<nav class="w-100">
-				<ul class="nav justify-content-center justify-content-lg-around">
+				<ul class="nav justify-content-center justify-content-lg-center">
 					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link link-dark">Home</a></li>
 					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link link-dark">Electronics</a></li>
 					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link link-dark">Jewelery</a></li>
