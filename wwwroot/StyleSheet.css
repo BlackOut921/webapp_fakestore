@@ -21,9 +21,41 @@
 }
 
 .fs-thumb {
-    width: max(100px, 25%, 200px);
+    width: max(150px, 25%);
+    height: 400px;
+    display: grid;
+    align-content: center;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
     .fs-thumb:hover {
         transform: scale(105%);
+        background-size: auto 105%;
     }
+
+.fs-thumb-category-men {
+    background-image: url("Images/Index/AdobeStock_247763951_thumb.jpg");
+}
+
+.fs-thumb-category-women {
+    background-image: url("Images/Index/AdobeStock_374115145_thumb.jpg");
+}
+
+.fs-thumb-category-kid {
+    background-image: url("Images/Index/AdobeStock_168742247_thumb.jpg");
+}
+
+.fs-thumb-category-tech {
+    background-image: url("Images/Index/AdobeStock_169201525_thumb.jpg");
+}
+
+.fs-thumb-category-entertainment {
+    background-image: url("Images/Index/AdobeStock_169201525_thumb.jpg");
+}
+
+.fs-thumb-category-placeholder {
+    background-color: red;
+}
