@@ -6,14 +6,6 @@
     transition: 0.1s;
 }
 
-body {
-    /*background-image: url("Images/bg_bggenerator_com.png");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;*/
-}
-
 .fs-logo {
     width: max(10%, 200px, 15%);
     height: auto;
@@ -21,7 +13,7 @@ body {
 }
 
 .fs-banner-img {
-    background-image: url("Images/AdobeStock_437686659_banner.jpg");
+    background-image: url("Images/Index/AdobeStock_437686659_banner.jpg");
     background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
