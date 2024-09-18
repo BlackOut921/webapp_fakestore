@@ -12,7 +12,8 @@
 <body class="bg-body">
     <header class="mb-3">@await Html.PartialAsync("_PartialHeader")</header>
     @RenderSection("PageBanner", false)
-	<main class="container mb-3">@RenderBody()</main>
+	<main class="min-vh-100 container mb-3">@RenderBody()</main>
+	<footer class="bg-dark">@await Html.PartialAsync("_PartialFooter")</footer>
     <script src="~/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous" async></script>
     <script src="~/JavaScript.js" async></script>
 </body>

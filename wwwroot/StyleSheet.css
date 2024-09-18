@@ -6,6 +6,14 @@
     transition: 0.1s;
 }
 
+body {
+    background-image: url("Images/AdobeStock_422780343.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .fs-logo {
     width: max(10%, 200px, 15%);
     height: auto;
@@ -22,7 +30,8 @@
 
 .fs-thumb {
     width: max(150px, 25%);
-    height: 400px;
+    height: max(150px, 25%);
+    aspect-ratio: 1/1;
     display: grid;
     align-content: center;
     background-attachment: scroll;
@@ -33,7 +42,7 @@
 
     .fs-thumb:hover {
         transform: scale(105%);
-        background-size: auto 105%;
+        background-size: 110%;
     }
 
 .fs-thumb-category-men {
@@ -53,9 +62,44 @@
 }
 
 .fs-thumb-category-entertainment {
-    background-image: url("Images/Index/AdobeStock_169201525_thumb.jpg");
+    background-image: url("Images/Index/AdobeStock_422182953_thumb.jpg");
+}
+
+.fs-thumb-category-gaming {
+    background-image: url("Images/Index/AdobeStock_233234925_thumb.jpg");
+}
+
+.fs-thumb-category-acc {
+    background-image: url("Images/Index/AdobeStock_166940835_thumb.jpg");
+}
+
+.fs-thumb-category-earrings {
+    background-image: url("Images/Index/AdobeStock_166940835_thumb.jpg");
+}
+
+.fs-thumb-category-necklaces {
+    background-image: url("Images/Index/AdobeStock_166940835_thumb.jpg");
+}
+
+.fs-thumb-category-rings {
+    background-image: url("Images/Index/AdobeStock_166940835_thumb.jpg");
+}
+
+.fs-thumb-category-watches {
+    background-image: url("Images/Index/AdobeStock_436057975_thumb.jpeg");
 }
 
 .fs-thumb-category-placeholder {
     background-color: red;
 }
+
+.observer-target {
+    position: relative;
+    opacity: 0;
+    transition: 1s; /* ???? not 1s - maybe affected by transition in *{} ???? */
+    transition-delay: 0.1s;
+}
+
+    .observer-target.show {
+        opacity: 1;
+    }

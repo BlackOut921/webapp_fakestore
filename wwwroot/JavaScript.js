@@ -1,6 +1,7 @@
 ﻿"use strict";
 
-async function GetProducts() {
+//IIFE - for testing api call
+(async () => {
     try {
         const response = await fetch("https://fakestoreapi.com/products");
         if (response.ok) {
@@ -27,8 +28,11 @@ async function GetProducts() {
     catch (e) {
         console.log(e);
     }
-}
+})();
 
 window.onload = () => {
-    GetProducts();
+    const _observer = new IntersectionObserver(items =>
+        items.forEach(i => i.isIntersecting && i.target.classList.add("show")));
+    const _observerTargets = document.querySelectorAll(".observer-target");
+    _observerTargets.length > 0 && _observerTargets.forEach(i => _observer.observe(i));
 };
