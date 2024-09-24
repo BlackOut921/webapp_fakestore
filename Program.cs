@@ -1,5 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+
+using webapp_fakestore.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
+//Connect to ProductDb
+builder.Services.AddDbContext<FakeProductDbContext>(options => 
+	options.UseSqlServer(builder.Configuration.GetConnectionString("ProductDb")));
 
 var app = builder.Build();
 app.UseHttpsRedirection();

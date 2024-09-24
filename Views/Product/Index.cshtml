@@ -1,0 +1,23 @@
+﻿@using webapp_fakestore.Models
+@model FakeSearchResult
+
+@{
+	ViewData["Title"] = "";
+}
+
+<h1 class="display-1">@(Model == null ? "0" : Model.Products.Count()) results</h1>
+
+@if (Model != null)
+{
+	@if (Model.Products.Count() > 0)
+	{
+		@foreach (FakeProductModel item in Model.Products)
+		{
+			<div class="bg-light p-2">
+				<h6 class="display-6 border-bottom">@item.Name</h6>
+				<p class="lead">@item.Description</p>
+				<p class="lead">@item.Price</p>
+			</div>
+		}
+	}
+}

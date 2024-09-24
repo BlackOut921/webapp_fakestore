@@ -36,20 +36,29 @@
 		<div class="flex-fill d-flex flex-column justify-content-center align-items-center">
 			<!-- search bar -->
 			<div class="w-100 mb-3">
-				<form>
+				<form method="post" asp-controller="Product" asp-action="ShowSearchResult">
 					<div class="input-group">
-						<input type="search" placeholder="Search" class="form-control mx-auto rounded-5 me-2" />
-						<input type="submit" class="btn btn-dark rounded-5" />
+						<label for="query" class="form-control visually-hidden">Search</label>
+						<input type="search" placeholder="Search" id="query" name="query" class="form-control mx-auto rounded-5 me-2" />
+						<input type="submit" value="Search" class="btn btn-dark rounded-5" />
 					</div>
 				</form>
 			</div>
 			<!-- nav bar -->
 			<nav class="w-100">
 				<ul class="nav justify-content-center justify-content-lg-around">
-					<li class="nav-item"><a asp-controller="Home" asp-action="Index" class="nav-link link-dark">Home</a></li>
-					<li class="nav-item"><a asp-controller="Product" asp-action="Clothing" class="nav-link link-dark">Clothing</a></li>
-					<li class="nav-item"><a href="#" class="nav-link link-dark">Electronics</a></li>
-					<li class="nav-item"><a href="#" class="nav-link link-dark">Jewellery</a></li>
+					<li class="nav-item">
+						<a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link link-dark">Home</a>
+					</li>
+					<li class="nav-item">
+						<a asp-area="" asp-controller="Product" asp-action="Index" class="nav-link link-dark">Clothing</a>
+					</li>
+					<li class="nav-item">
+						<a asp-area="" asp-controller="Product" asp-action="Index" class="nav-link link-dark">Electronics</a>
+					</li>
+					<li class="nav-item">
+						<a asp-area="" asp-controller="Product" asp-action="Index" class="nav-link link-dark">Jewellery</a>
+					</li>
 				</ul>
 			</nav>
 		</div>

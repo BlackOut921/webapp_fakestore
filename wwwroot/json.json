@@ -1,0 +1,13 @@
+{
+  "Categories": [ "Clothing", "Electronics", "Jewellery" ],
+  "Products": [
+    {
+      "id": "0",
+      "Name": "_name",
+      "Description": "_description",
+      "Price": 0.00,
+      "Category": "_category",
+      "Keywords": [ "key", "words" ]
+    }
+  ]
+}
