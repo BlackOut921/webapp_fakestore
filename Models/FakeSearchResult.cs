@@ -7,6 +7,6 @@ namespace webapp_fakestore.Models
         [Required]
         public string Query { get; set; } = string.Empty;
 
-        public IEnumerable<FakeProductModel> Products { get; set; } = Enumerable.Empty<FakeProductModel>();
+        public IEnumerable<FakeProductModel> Products { get; set; } = [];
     }
 }

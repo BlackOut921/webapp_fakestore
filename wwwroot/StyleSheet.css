@@ -1,5 +1,9 @@
 ﻿@charset "utf-8";
 
+:root {
+    --color-green-light: #EAFFE3;
+}
+
 *, 
 *:before,
 *:after {
@@ -104,7 +108,6 @@ body {
         opacity: 1;
     }
 
-.fs-product-grid-item {
-    width: 250px;
-    height: 250px;
+.fs-bg-green-light {
+    background-color: var(--color-green-light);
 }

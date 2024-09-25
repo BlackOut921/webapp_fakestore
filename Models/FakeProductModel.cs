@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+using Microsoft.AspNetCore.SignalR.Protocol;
+
 namespace webapp_fakestore.Models
 {
 	public class FakeProductModel
@@ -24,11 +26,13 @@ namespace webapp_fakestore.Models
 		public double Price { get; set; } = 0.00;
 
 		public enum Category { None, Clothing, Electronics, Jewellery };
+		[Display(Name = "Category")]
+		[EnumDataType(typeof(Category))]
 		public Category ProductCategory { get; set; } = FakeProductModel.Category.None;
 
 		[Display(Name = "Keywords")]
 		[DataType(DataType.Text)]
-		public string[]? Keywords { get; set; } = Array.Empty<string>();
+		public string KeywordString = string.Empty;
 
 		public FakeProductModel()
 		{

@@ -1,5 +1,5 @@
 ﻿@{
-	ViewData["Title"] = "Index";
+	ViewData["Title"] = "FS - Home";
 }
 
 @section PageBanner {
@@ -11,47 +11,49 @@
 	<div class="border-bottom pb-5 text-center observer-target">
 		<h2 class="display-2">Clothing</h2>
 		<p class="lead">Category description</p>
-		<div class="d-flex flex-wrap justify-content-center gap-3 mb-3">
-			<a href="#" title="Men's Clothing" 
+		<div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+			<a href="#" title="Men's Clothing"
 			   class="fs-thumb fs-thumb-category-men link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover overflow-hidden shadow">
 				<span class="fs-3">Men's</span>
 			</a>
-			<a href="#" title="Women's Clothing" 
+			<a href="#" title="Women's Clothing"
 			   class="fs-thumb fs-thumb-category-women link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover overflow-hidden shadow">
 				<span class="fs-3">Women's</span>
 			</a>
-			<a href="#" title="Kids Clothing" 
+			<a href="#" title="Kids Clothing"
 			   class="fs-thumb fs-thumb-category-kid link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover overflow-hidden shadow">
 				<span class="fs-3">Kids</span>
 			</a>
 		</div>
+		<a asp-area="" asp-controller="Product" asp-action="Clothing" class="btn btn-outline-info">Browse for More</a>
 	</div>
 
 	<!-- content - electronics -->
 	<div class="border-bottom pb-5 text-center observer-target">
 		<h2 class="display-2">Electronics</h2>
 		<p class="lead">Category description</p>
-		<div class="d-flex flex-wrap justify-content-center gap-3 mb-3">
-			<a href="#" title="Tech" 
+		<div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+			<a href="#" title="Tech"
 			   class="fs-thumb fs-thumb-category-tech link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover overflow-hidden shadow">
 				<span class="fs-3">PC</span>
 			</a>
-			<a href="#" title="TV and Audio" 
+			<a href="#" title="TV and Audio"
 			   class="fs-thumb fs-thumb-category-entertainment link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover overflow-hidden shadow">
 				<span class="fs-3">TV & Audio</span>
 			</a>
-			<a href="#" title="Gaming" 
+			<a href="#" title="Gaming"
 			   class="fs-thumb fs-thumb-category-gaming link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover overflow-hidden shadow">
 				<span class="fs-3">Gaming</span>
 			</a>
 		</div>
+		<a asp-area="" asp-controller="Product" asp-action="Electronics" class="btn btn-outline-success">Browse Category</a>
 	</div>
 
 	<!-- content - jewellery -->
 	<div class="pb-5 text-center observer-target">
 		<h2 class="display-2">Jewellery</h2>
 		<p class="lead">Category description</p>
-		<div class="d-flex flex-wrap justify-content-center gap-3 mb-3">
+		<div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
 			<a href="#" title=""
 			   class="fs-thumb fs-thumb-category-acc link-light link-underline link-underline-opacity-0 link-underline-opacity-75-hover overflow-hidden shadow">
 				<span class="fs-3">Accessories</span>
@@ -73,5 +75,6 @@
 				<span class="fs-3">Watches</span>
 			</a>
 		</div>
+		<a href="#" class="btn btn-outline-dark">Browse Category</a>
 	</div>
 </div>
