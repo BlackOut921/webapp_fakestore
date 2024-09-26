@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
@@ -46,7 +47,7 @@ namespace webapp_fakestore.Controllers
 		public async Task<IActionResult> GetSearchResult(string query)
 		{
 			IEnumerable<FakeProductModel> products = await productDbContext.Products
-				.Where(i => i.Name.Contains(query) || i.KeywordString.Contains(query))
+				.Where(i => i.Name.Contains(query) || i.Tags.Contains(query))
 				.ToListAsync();
 
 			return View(
@@ -72,6 +73,7 @@ namespace webapp_fakestore.Controllers
 				return "Product added";
 			}
 
+			ModelState.AddModelError(string.Empty, "Failed adding new product");
 			return "Failed to add product";
 		}
 	}

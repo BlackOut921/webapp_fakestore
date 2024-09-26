@@ -11,8 +11,8 @@ using webapp_fakestore.Models;
 namespace webapp_fakestore.Migrations
 {
     [DbContext(typeof(FakeProductDbContext))]
-    [Migration("20240923135457__product_init_")]
-    partial class _product_init_
+    [Migration("20240926100756__init")]
+    partial class _init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,9 +36,6 @@ namespace webapp_fakestore.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Keywords")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -48,6 +45,10 @@ namespace webapp_fakestore.Migrations
 
                     b.Property<int>("ProductCategory")
                         .HasColumnType("int");
+
+                    b.Property<string>("Tags")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

@@ -5,7 +5,7 @@
 namespace webapp_fakestore.Migrations
 {
     /// <inheritdoc />
-    public partial class _product_init_ : Migration
+    public partial class _init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -20,7 +20,7 @@ namespace webapp_fakestore.Migrations
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Price = table.Column<double>(type: "float", nullable: false),
                     ProductCategory = table.Column<int>(type: "int", nullable: false),
-                    Keywords = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Tags = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

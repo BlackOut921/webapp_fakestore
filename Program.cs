@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 //Connect to ProductDb
 builder.Services.AddDbContext<FakeProductDbContext>(options => 
-	options.UseSqlServer(builder.Configuration.GetConnectionString("ProductDb")));
+	options.UseSqlServer(builder.Configuration.GetConnectionString("ProductDbRemote")));
 
 var app = builder.Build();
 app.UseHttpsRedirection();
