@@ -1,0 +1,15 @@
+﻿@using webapp_fakestore.Models
+@model FakeProductModel
+
+@{
+	ViewData["Title"] = "FS = View Product";
+}
+
+<h1 class="display-1 border-bottom">@Model.Name</h1>
+<div class="d-flex flex-column flex-md-row">
+	<img src="~/Images/AdobeStock_537184538_black.png" alt="Product image" class="fs-img-thumb" />
+	<div class="flex-fill">
+		<p class="fs-3 fw-bold">@Model.Price</p>
+		<p class="lead">@Model.Description</p>
+	</div>
+</div>

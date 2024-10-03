@@ -24,9 +24,19 @@ window.onload = () => {
     const _observerTargets = document.querySelectorAll(".observer-target");
     _observerTargets.length > 0 && _observerTargets.forEach(i => _observer.observe(i));
 
-    function Test(options) {
-        options.bTest && console.log(`bTest=${options.bTest}`);
-    }
-
+    //-----------------------------------
+    //Print to console if bTest option is true
+    const Test = (options) => options.bTest && console.log(`bTest=${options.bTest}`);
     Test({ bTest: true }); //Options objects { options }
+    //-----------------------------------
+
+    //Dynamically modify datalist options
+    //Catch search queries?? Cookies?? LocalStorage??
+    const dlKeywordsElement = document.getElementById("dlKeywords");
+    const dlKeywordsOptions = ["test", "product", 921];
+    dlKeywordsOptions.length > 0 && dlKeywordsOptions.forEach(i => {
+        const newOption = document.createElement("option");
+        newOption.value = i.toString();
+        dlKeywordsElement.appendChild(newOption);
+    });
 };

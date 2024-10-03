@@ -108,6 +108,17 @@ body {
         opacity: 1;
     }
 
-.fs-bg-green-light {
-    background-color: var(--color-green-light);
+.fs-img-thumb {
+    width: max(400px, 30%);
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
+
+.fs-hover-swell {
+    transform: scale(100%);
+}
+
+    .fs-hover-swell:hover {
+        transform: scale(102%);
+    }

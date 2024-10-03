@@ -1,21 +1,15 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 
 using webapp_fakestore.Models;
 
 namespace webapp_fakestore.Controllers
 {
 	[AllowAnonymous]
-	public class ProductController : Controller
+	public class ProductController(FakeProductDbContext dbContext) : Controller
 	{
-		private readonly FakeProductDbContext productDbContext;
-		public ProductController(FakeProductDbContext dbContext)
-		{
-			this.productDbContext = dbContext;
-		}
+		private readonly FakeProductDbContext productDbContext = dbContext;		
 
 		[HttpGet]
 		public IActionResult Index() => View();
@@ -23,29 +17,32 @@ namespace webapp_fakestore.Controllers
 		[HttpGet]
 		public IActionResult Clothing()
 		{
+			//Return all clothing products
 			return View(
 				nameof(Index), 
 				new FakeSearchResult { 
 					Query = "Category: clothing", 
-					Products = GetProductsBy(FakeProductModel.Category.Clothing) 
+					Products = GetProductsByCategory(FakeProductModel.Category.Clothing) 
 				});
 		}
 
 		[HttpGet]
 		public IActionResult Electronics()
 		{
+			//Return all electronic products
 			return View(
 				nameof(Index),
 				new FakeSearchResult
 				{
 					Query = "Category: electronics",
-					Products = GetProductsBy(FakeProductModel.Category.Electronics)
+					Products = GetProductsByCategory(FakeProductModel.Category.Electronics)
 				});
 		}
 
 		[HttpPost]
 		public async Task<IActionResult> GetSearchResult(string query)
 		{
+			//Get all products that have query in name or tags/keywords (maybe add description??)
 			IEnumerable<FakeProductModel> products = await productDbContext.Products
 				.Where(i => i.Name.Contains(query) || i.Tags.Contains(query))
 				.ToListAsync();
@@ -56,25 +53,30 @@ namespace webapp_fakestore.Controllers
 				);
 		}
 
-		private IEnumerable<FakeProductModel> GetProductsBy(FakeProductModel.Category c) => 
-			productDbContext.Products.Where(i => i.ProductCategory == c);
+		//Get product from db with id from asp-route-id on anchor tag
+		[HttpGet]
+		public async Task<IActionResult> ViewProduct(int id) => 
+			View(await productDbContext.FindAsync<FakeProductModel>(id) ?? new FakeProductModel { Name = string.Empty });
 
 		[HttpGet]
 		public IActionResult AddProduct() => View();
 
 		[HttpPost]
-		public async Task<string> AddProduct(FakeProductModel model)
+		public async Task<IActionResult> AddProduct(FakeProductModel model)
 		{
 			if(ModelState.IsValid)
 			{
 				await productDbContext.AddAsync<FakeProductModel>(model);
 				await productDbContext.SaveChangesAsync();
 
-				return "Product added";
+				return View(nameof(Index));
 			}
 
 			ModelState.AddModelError(string.Empty, "Failed adding new product");
-			return "Failed to add product";
+			return View(nameof(AddProduct));
 		}
+
+		private IEnumerable<FakeProductModel> GetProductsByCategory(FakeProductModel.Category c) =>
+			productDbContext.Products.Where(i => i.ProductCategory == c);
 	}
 }

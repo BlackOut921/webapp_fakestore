@@ -39,7 +39,8 @@
 				<form method="post" asp-controller="Product" asp-action="GetSearchResult">
 					<div class="input-group">
 						<label for="query" class="form-control visually-hidden">Search</label>
-						<input type="search" placeholder="Search" id="query" name="query" class="form-control mx-auto rounded-5 me-2" />
+						<input type="search" list="dlKeywords" placeholder="Search" id="query" name="query" class="form-control mx-auto rounded-5 me-2" />
+						<datalist id="dlKeywords"></datalist> <!-- dynamically changes with js -->
 						<input type="submit" value="Search" class="btn btn-dark rounded-5" />
 					</div>
 				</form>
@@ -57,7 +58,7 @@
 						<a asp-area="" asp-controller="Product" asp-action="Electronics" class="nav-link link-dark">Electronics</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link link-dark">Jewellery</a>
+						<a href="#" class="nav-link link-secondary disabled">Jewellery</a>
 					</li>
 				</ul>
 			</nav>

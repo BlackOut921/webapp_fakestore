@@ -16,16 +16,18 @@
 	<div class="flex-fill d-flex flex-column gap-2">
 		@foreach (FakeProductModel item in Model.Products)
 		{
-			<div class="bg-light observer-target shadow p-2">
-				<h6 class="display-6 text-break border-bottom">@item.Name</h6>
-				<div class="d-flex flex-row justify-content-start align-items-stretch">
-					<img src="~/Images/fs_logo_1024.png" alt="Product thumbnail" class="img-fluid w-25" />
-					<div class="flex-fill">
-						<p class="fw-bold">@item.Price</p>
-						<p class="lead">@item.Description</p>
+			<a asp-area="" asp-controller="Product" asp-action="ViewProduct" asp-route-id="@item.Id" class="text-decoration-none text-dark fs-hover-swell">
+				<div class="bg-light observer-target shadow p-2">
+					<h6 class="display-6 text-break border-bottom">@item.Name</h6>
+					<div class="d-flex flex-row justify-content-start align-items-stretch">
+						<img src="~/Images/AdobeStock_537184538_black.png" alt="Product thumbnail" class="img-fluid w-25" />
+						<div class="flex-fill">
+							<p class="fw-bold">@item.Price</p>
+							<p class="lead">@item.Description</p>
+						</div>
 					</div>
 				</div>
-			</div>
+			</a>
 		}
 	</div>
 }
