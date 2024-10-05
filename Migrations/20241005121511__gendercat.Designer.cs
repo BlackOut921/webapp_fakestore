@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using webapp_fakestore.Models;
 
@@ -10,9 +11,11 @@ using webapp_fakestore.Models;
 namespace webapp_fakestore.Migrations
 {
     [DbContext(typeof(FakeProductDbContext))]
-    partial class FakeProductDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241005121511__gendercat")]
+    partial class _gendercat
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

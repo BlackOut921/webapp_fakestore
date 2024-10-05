@@ -22,15 +22,33 @@
 	</div>
 	<div class="mb-3">
 		<label asp-for="@Model.ProductCategory" class="form-label">Category</label>
-		<select asp-for="@Model.ProductCategory" 
-				asp-items="@Html.GetEnumSelectList<FakeProductModel.Category>()" 
+		<select asp-for="@Model.ProductCategory"
+				asp-items="@Html.GetEnumSelectList<FakeProductModel.Category>()"
+				class="form-select">
+		</select>
+	</div>
+	<div class="mb-3">
+		<label asp-for="@Model.ProductGenderTarget" class="form-label">Gender</label>
+		<select asp-for="@Model.ProductGenderTarget"
+				asp-items="@Html.GetEnumSelectList<FakeProductModel.GenderTarget>()"
 				class="form-select">
 		</select>
 	</div>
 	<div class="mb-3">
 		<label asp-for="@Model.Tags" class="form-label">Tags</label>
-		<input asp-for="@Model.Tags" class="form-control" />
+		<input asp-for="@Model.Tags" value="tag" class="form-control" />
 		<span class="text-muted">Seperate each tag with a space</span>
 	</div>
 	<button type="submit" class="btn btn-success">Add Product</button>
 </form>
+
+<script>
+	const genderCategoryContainer = document.getElementById("ProductGenderTarget").parentElement;
+	genderCategoryContainer.style.display = "none";
+
+	const productCategory = document.getElementById("ProductCategory");
+	productCategory.addEventListener("change", () => {
+		let index = productCategory.options.selectedIndex;
+		genderCategoryContainer.style.display = index === 1 || index === 3 ? "block" : "none";
+	});
+</script>

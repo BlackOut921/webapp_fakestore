@@ -26,15 +26,16 @@ namespace webapp_fakestore.Models
 		public enum Category { None, Clothing, Electronics, Jewellery };
 		[Display(Name = "Category")]
 		[EnumDataType(typeof(Category))]
-		public Category ProductCategory { get; set; } = FakeProductModel.Category.None;
+		public Category ProductCategory { get; set; } = Category.None;
+
+		//if productcategory == clothing || jewellery ? show_gender_cat : hide;
+		public enum GenderTarget { None, Male, Female };
+		[Display(Name = "Gender")]
+		[EnumDataType(typeof(GenderTarget))]
+		public GenderTarget ProductGenderTarget { get; set; } = GenderTarget.None;
 
 		[Display(Name = "Tags")]
 		[DataType(DataType.Text)]
-		public string Tags { get; set; } = string.Empty;
-
-		public FakeProductModel()
-		{
-			//
-		}
+		public string Tags { get; set; } = "tag";
 	}
 }

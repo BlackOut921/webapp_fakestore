@@ -69,10 +69,9 @@ namespace webapp_fakestore.Controllers
 				await productDbContext.AddAsync<FakeProductModel>(model);
 				await productDbContext.SaveChangesAsync();
 
-				return View(nameof(Index));
+				return RedirectToAction("Index", "Home");
 			}
 
-			ModelState.AddModelError(string.Empty, "Failed adding new product");
 			return View(nameof(AddProduct));
 		}
 
